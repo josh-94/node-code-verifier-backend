@@ -20,6 +20,15 @@ app.get('/hello', (req, res) => {
     //Send Hello World
     res.send('Hello World');
 });
+// New Route for exercise sending a JSON as response
+app.get('/exercise', (req, res) => {
+    //Send Good Bye World
+    res.json({
+        "data": {
+            "message": "Goodbye, world"
+        }
+    });
+});
 //Execute APP and Listen Requests to PORT
 app.listen(port, () => {
     console.log(`Express Server: Running at http://localhost:${port}`);

@@ -23,6 +23,19 @@ app.get('/hello', (req: Request, res: Response) => {
     res.send('Hello World')
 });
 
+// New Route for exercise sending a JSON as response
+
+app.get('/exercise', (req: Request, res: Response) => {
+    //Send Good Bye World
+    res.json({
+        "data": {
+            "message": "Goodbye, world"
+        }
+    });
+
+});
+
+
 //Execute APP and Listen Requests to PORT
 
 app.listen(port, () => {
